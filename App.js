@@ -7,7 +7,8 @@ import {
 import { Colors} from 'react-native/Libraries/NewAppScreen';
 import Tab from './src/menus/Tabs'
  
-import { SafeAreaProvider } from 'react-native-safe-area-context';
+import { SafeAreaProvider } from 'react-native-safe-area-context'; 
+import Login from './src/menus/Login'
 
 const App  =  () => {
   const isDarkMode = useColorScheme() === 'dark';
@@ -16,7 +17,7 @@ const App  =  () => {
 
   return (
     <SafeAreaProvider style={backgroundStyle}>
-      <Tab />
+      <Login />
     </SafeAreaProvider>
   );
 };

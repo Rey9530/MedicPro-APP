@@ -4,3 +4,6 @@ npm install @react-navigation/bottom-tabs
 npm install @react-navigation/stack
 npm i react-native-vector-icons
 react-native link react-native-vector-icons
+npm install @react-native-async-storage/async-storage
+npx react-native link @react-native-async-storage/async-storage
+npm i react-native-elements

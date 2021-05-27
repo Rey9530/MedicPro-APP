@@ -28,13 +28,39 @@ export default function App() {
   return (
     <NavigationContainer>
       <Tab.Navigator
-        initialRouteName="Home"
+        initialRouteName="Inicio"
         screenOptions = { ({route}) => ({
             tabBarIcon: ({color}) => screenOptions(route, color)
         })}
       >
-        <Tab.Screen name="Home" component={HomeScreen}  />
-        <Tab.Screen name="Settings" component={SettingsScreen}  /> 
+        <Tab.Screen 
+          name="Inicio"
+          component={HomeScreen}   
+          options={{
+            title: "Inicio",
+          }}
+        /> 
+        <Tab.Screen 
+          name="Settings"
+          component={SettingsScreen}   
+          options={{
+            title: "Configuraciones",
+          }}
+        /> 
+        <Tab.Screen 
+          name="Citas"
+          component={SettingsScreen}   
+          options={{
+            title: "Citas",
+          }}
+        /> 
+        <Tab.Screen 
+          name="Consultas"
+          component={SettingsScreen}   
+          options={{
+            title: "Consultas",
+          }}
+        /> 
       </Tab.Navigator>
     </NavigationContainer>
   );
@@ -44,11 +70,17 @@ export default function App() {
 function screenOptions(route, color){
     let iconName;
     switch (route.name) {
-        case "Home":
+        case "Inicio":
             iconName = "home"
             break; 
         case "Settings":
-            iconName = "cellphone-settings"
+            iconName = "account"
+            break; 
+        case "Consultas":
+            iconName = "medical-bag"
+            break; 
+        case "Citas":
+            iconName = "calendar-month"
             break; 
         default:
             break;
